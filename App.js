@@ -1,6 +1,8 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import {autocomplete, picker, checkbox} from './dummy/index'
+// import SignupFormComponent from 'rn-formly'
+import SafeAreaDecider from 'react-native-smart-statusbar'
 
 const inputFields = [
   {
@@ -55,7 +57,7 @@ const inputFields = [
   }, 
   {
     key: "gender", 
-    type: 'checkboxes'
+    type: 'checkboxes',
     label: 'Select your Gender', 
     helper: '(Optional), Please select a gender', 
     templateOptions: {
@@ -77,10 +79,9 @@ const inputFields = [
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-    </View>
-  );
+    <>
+  </>
+  )
 }
 
 const styles = StyleSheet.create({
@@ -91,3 +92,14 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
+
+// <SignupFormComponent 
+// inputFields={inputFields}
+// globalButtonText={'Next'}
+// onButtonClick={this.justLogDataFromForms}
+// defaultColor={colors.primaryGreen}
+// ProgressBarProps={{
+//   blink: false
+// }}
+// /> 
